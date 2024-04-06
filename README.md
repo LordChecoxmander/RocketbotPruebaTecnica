@@ -7,4 +7,5 @@ instalacion de virtual env
 Alta y configuracion de virtual env
     source env/bin/activate
     pip install openpyxl
-    pip install seleniumdeactivate
+    pip install selenium
+    deactivate
