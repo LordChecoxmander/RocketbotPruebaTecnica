@@ -8,15 +8,15 @@ wb = load_workbook(file)
 sheet = wb.active
 wb.close()
 
+#itero sobre una lista de filas
 for row in sheet.iter_rows(min_row=1, max_row=45, max_col=10):
     #evaluo la columna "J"(estado)
-    print("estado: "+ row[9].value)
     match str.lower(row[9].value):
         case "regularizado":
-            print("subir la información al formulario")
+            #print("subir la información al formulario")
             charge_form(row)
         case "atrasado":
-            print(" enviar un mail ")
+            #print(" enviar un mail ")
             gmail_send_message(row)
         case 'pendiente':
             #en este caso debe ser ignorado
